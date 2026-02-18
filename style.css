@@ -5,7 +5,7 @@ html, body {
  }
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
  background: none;/* общий фон как в макете */
   color: #1f2a22;
 }
@@ -53,7 +53,7 @@ height: 64px;
   border-radius: 10px;
   background: #77ba96;
   color: #2a2a2a;
-  font-size: 16px;
+  font-size: 18px;
    box-shadow: 2px 2px 2px rgb(46, 46, 46);
    transition: transform .15s ease, filter .15s ease;
   cursor: pointer;
@@ -85,7 +85,7 @@ scroll-snap-type: y mandatory;
 
   width: 100%;
 
-  max-width: 1000px;   /* выбери одну ширину */
+  max-width: 1000px;   
   margin: 0 auto;  
   
 }
@@ -95,7 +95,7 @@ scroll-snap-type: y mandatory;
     width: 100%;
 
   background: #448565eb;
-  border-radius: 6px;
+  border-radius: 12px;
   padding: 36px;
   display: grid;
   grid-template-columns: 69% 30%;
@@ -111,21 +111,21 @@ scroll-snap-type: y mandatory;
 .profile-fields {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   color: #000000bc;
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: 24px;
-    margin-left: 10px;   
-    
+    font-size: 24px;
+    font-weight: bolder;
+    margin-right: 48px;
+    margin-left: 16px;   
+    margin-top: 20px;
 }
 
 .field {
   display: flex;
    align-items: center;
-  gap: 12px;
+  gap: 16px;
   padding-bottom: 6px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
  border-bottom: 1.5px solid #333;
 }
 
@@ -136,9 +136,10 @@ scroll-snap-type: y mandatory;
 
 .photo-box {
     width: 100%;
+      aspect-ratio: 9/10;
   background: #f5f5f5;
   border-radius: 2px;
-  height: 100%;
+
   display: grid;
   place-items: center;
   color: #000000c7;
@@ -158,7 +159,7 @@ scroll-snap-type: y mandatory;
 
 display: inline-block;
     margin: 0 0 32px;
-  font-size: 28px;
+  font-size: 34px;
   border-bottom: 1px solid #333;
   padding: 0 20px 6px;
   padding-bottom: 16px;
@@ -168,7 +169,7 @@ display: inline-block;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
-
+font-size: 20px;
   
 }
 
@@ -183,9 +184,9 @@ display: inline-block;
   position: relative;
   display: inline-block;
   
-  
+  font-size: 34px;
 margin-bottom: 16px;
-margin-top: 20px;
+margin-top: 10px;
 }
 #prosjekter  h2::after {
   content: "";
@@ -202,6 +203,7 @@ margin-top: 20px;
     color: #1f2a22;
   position: relative;
   transition: color 0.25s ease;
+  font-size: 22px;
 }
 
 /* Hover */
@@ -213,11 +215,11 @@ margin-top: 20px;
     background: #448565;
     color: #ffffff;
     border-radius: 8px;
-    padding: 20px;
+    padding: 30px;
     margin-bottom: 2px;
 
     display: grid;
-    grid-template-columns: 1fr 140px;
+    grid-template-columns: 1fr 180px;
     grid-template-areas: "text img";
     gap: 16px;
     align-items: center;
@@ -229,7 +231,8 @@ margin-top: 20px;
 }
 .prosjekt-img{
     background: #f5f5f5;
-        height: 100px;
+        width: 100%;
+    aspect-ratio: 1/1;
     border-radius: 2px;
     display: grid;
     grid-area: img;
@@ -240,13 +243,14 @@ margin-top: 20px;
 
 .prosjekt p{
     margin: 0;
-    font-size: 16px;
-    line-height: 1.4;
+    font-size: 20px;
+    
+    line-height: 1.5;
 }
 
 .prosjekt.prosjekt-reverse{
     
-      grid-template-columns: 140px 1fr;
+      grid-template-columns: 180px 1fr;
       grid-template-areas: "img text";
 
 }
@@ -278,7 +282,7 @@ text-align: center;
   text-align: center;
   margin-bottom: 30px;
   margin-top: 0;
-  font-size: 28px;
+  font-size: 34px;
   position: relative;
   display: inline-block;
   left: 50%;
@@ -310,7 +314,7 @@ text-align: center;
 .edu-text {
   background: #4f8767;
   color: #ffffff;
-padding: 24px;
+padding: 30px;
   border-radius: 8px;
    box-shadow: 6px 4px 4px rgb(136, 137, 135)
 
@@ -319,8 +323,8 @@ padding: 24px;
 /* Текст внутри */
 .edu-text p {
   margin: 0;
-  line-height: 1.5;
-  font-size: 16px;
+  line-height: 1.6;
+  font-size: 20px;
 }
 
 /* Заголовок секции */
@@ -332,6 +336,7 @@ padding: 24px;
   left: 50%;
   transform: translateX(-50%);
   padding-bottom: 10px;
+  font-size: 34px;
 }
 
 #erfaring > h2::after{
@@ -379,4 +384,5 @@ padding: 24px;
 .exp-text p{
   margin: 0;
   line-height: 1.6;
+  font-size: 20px;
 }
