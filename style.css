@@ -24,7 +24,8 @@ body {
   position: sticky; /* держится при скролле */
   top: 0;
   height: 100vh;
-   box-shadow: 6px 4px 4px rgb(136, 137, 135)
+   box-shadow: 6px 4px 8px rgba(136,137,135,0.6),
+            inset 2px 2px 6px rgba(0,0,0,0.15);
 }
 
 .logo-box {
@@ -54,7 +55,8 @@ height: 64px;
   background: #77ba96;
   color: #2a2a2a;
   font-size: 18px;
-   box-shadow: 2px 2px 2px rgb(46, 46, 46);
+   box-shadow: 6px 4px 8px rgba(37, 37, 37, 0.6),
+            inset 2px 2px 6px rgba(0,0,0,0.15);
    transition: transform .15s ease, filter .15s ease;
   cursor: pointer;
 }
@@ -105,7 +107,8 @@ scroll-snap-type: y mandatory;
   margin-bottom: 36px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 6px 4px 4px rgb(136, 137, 135)
+box-shadow: 6px 4px 8px rgba(136,137,135,0.6),
+            inset 2px 2px 6px rgba(0,0,0,0.15);
 }
 
 .profile-fields {
@@ -176,7 +179,7 @@ font-size: 20px;
 
 
 .prosjekt-wrapper {
-  margin-bottom:4px;
+  margin-bottom:16px;
 }
 #prosjekter h2{
 
@@ -185,8 +188,8 @@ font-size: 20px;
   display: inline-block;
   
   font-size: 34px;
-margin-bottom: 16px;
-margin-top: 10px;
+margin-bottom: 32px;
+margin-top: 16px;
 }
 #prosjekter  h2::after {
   content: "";
@@ -203,7 +206,7 @@ margin-top: 10px;
     color: #1f2a22;
   position: relative;
   transition: color 0.25s ease;
-  font-size: 22px;
+  font-size: 26px;
 }
 
 /* Hover */
@@ -223,7 +226,10 @@ margin-top: 10px;
     grid-template-areas: "text img";
     gap: 16px;
     align-items: center;
-     box-shadow: 6px 4px 4px rgb(136, 137, 135)
+ 
+
+box-shadow: 6px 4px 8px rgba(136,137,135,0.6),
+            inset 2px 2px 6px rgba(0,0,0,0.15);
 }
 
 .prosjekt-text{
@@ -279,21 +285,20 @@ text-align: center;
 
 
 #utdanning h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  margin-top: 0;
-  font-size: 34px;
-  position: relative;
+ position: relative;
   display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
+  
+  font-size: 34px;
+margin-bottom: 32px;
+margin-top: 16px;
 }
 
 #utdanning h2::after {
   content: "";
   display: block;
   width: 360px;          /* длина линии */
-  height: 1px;           /* толщина */
+  height: 1px;    
+   bottom: -16px;           /* толщина */
   background: #1f2a22;   /* цвет */
   margin: 10px auto 0;
 }
@@ -307,7 +312,7 @@ text-align: center;
 /* Название */
 .edu-item h3 {
   margin: 0 0 12px 0;
-  font-size: 22px;
+  font-size: 26px;
 }
 
 /* Зеленый блок текста */
@@ -316,7 +321,11 @@ text-align: center;
   color: #ffffff;
 padding: 30px;
   border-radius: 8px;
-   box-shadow: 6px 4px 4px rgb(136, 137, 135)
+ 
+
+
+box-shadow: 6px 4px 8px rgba(136,137,135,0.6),
+            inset 2px 2px 6px rgba(0,0,0,0.15);
 
 }
 
@@ -329,14 +338,12 @@ padding: 30px;
 
 /* Заголовок секции */
 #erfaring > h2{
-  text-align: center;
- 
   position: relative;
   display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
-  padding-bottom: 10px;
+
   font-size: 34px;
+margin-bottom: 32px;
+margin-top: 16px;
 }
 
 #erfaring > h2::after{
@@ -344,7 +351,7 @@ padding: 30px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0;
+  bottom: -16px;    
   width: 180px;      /* длина линии */
   height: 1px;
   background: #1f2a22;
@@ -354,6 +361,9 @@ padding: 30px;
 #erfaring{
   display: flex;
   flex-direction: column;
+}
+.exp-date{
+  font-size: 24px;
 }
 
 /* Каждая запись */
@@ -374,7 +384,7 @@ padding: 30px;
 
 .exp-head h3{
   
-  font-size: 22px;
+  font-size: 26px;
   
 }
 
@@ -386,3 +396,86 @@ padding: 30px;
   line-height: 1.6;
   font-size: 20px;
 }
+
+
+
+.panel {
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.panel.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+ 
+@media (max-width: 1024px) {
+
+  .layout {
+    grid-template-columns: 180px 1fr;
+  }
+
+  .main {
+    padding: 48px;
+  }
+
+  .profile-card {
+    grid-template-columns: 60% 40%;
+  }
+
+  .prosjekt {
+    grid-template-columns: 1fr 150px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: relative;
+    height: auto;
+  }
+
+  .main {
+    height: auto;
+    overflow: visible;
+    scroll-snap-type: none;
+    padding: 32px 20px;
+  }
+
+  .profile-card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .profile-fields {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .prosjekt,
+  .prosjekt.prosjekt-reverse {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "text";
+  }
+
+  .prosjekt {
+    padding: 20px;
+  }
+
+  .exp-head {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+}
+
